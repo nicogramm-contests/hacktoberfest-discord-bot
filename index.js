@@ -16,7 +16,9 @@ client.on('message', async (msg) => {
     m.edit(`Ponggers! Client ping: \`${m.createdTimestamp - msg.createdTimestamp}\`ms. Heartbeat ping: \`${client.ping}\`ms`);
   } else if(command === 'hello') {
     await msg.reply(`Hello ${msg.author.username}`);
-  } else if(command === 'steak'){
+  } else if(command === 'bye') {
+    await msg.reply(`Bye ${msg.author.username}!`);
+  } else if(command === 'steak') {
     let attach = new Attachment("https://media.giphy.com/media/9UyZI216ic5vG/giphy.gif");
     msg.channel.send(attach);
   } else if(command === 'lul') {
